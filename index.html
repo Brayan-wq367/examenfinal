@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOMADE DIGITAL</title>
+
+    <!-- REMIXICON -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
+    <!-- ESTILOS CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+
+    <!-- TIPOGRAFÍA -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <main class="contenedor__maestro">
+        <header class="portada">
+
+            <div class="titulo">
+                <h1>NOMADE DIGITAL</h1>
+                <p>Diseñador web</p>
+            </div>
+            
+            <div class="rrss">
+                <span>Conoce mis aventuras</span>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="ri-github-line"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btn-cotizar">
+                <a href="#cotizar">
+                    Cotizar web
+                    <i class="ri-arrow-down-s-line"></i>
+                </a>
+            </div>
+
+            
+            
+        </header>
+            <section class="contacto" id="cotizar">
+         
+                <form class="formulario" action="enviar.php" method="POST">
+
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre" type="text" name="nombre" placeholder="Ingresa tu nombre">
+                    </div>
+            
+                    <div>
+                        <label for="telefono">Whatsapp</label>
+                        <input id="telefono" type="tel" name="telefono" placeholder="Tu wsp con código de área" required>
+                    </div>
+            
+                    <div>
+                        <label for="Email">Email</label>
+                        <input id="Email" type="mail" name="email" placeholder="Tu correo electrónico" required>
+                    </div>
+            
+                    <div>
+                        <label for="selecciona">Selecciona el tipo de web</label>
+                        <select name="tipoweb" id="selecciona">
+                            <option value="onepage" selected>One page</option>
+                            <option value="corporatitva">Corporativa</option>
+                            <option value="ecommerce">Commerce</option>
+                            <option value="elearning">e-Learning</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+            
+                    <div>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" placeholder="Hablame sobre las selecciones de tu página"></textarea>
+                    </div>
+            
+                    <div>
+                        <label for="boceto">Sube un boceto de tu idea</label>
+                        <input type="file" name="boceto">
+                    </div>
+                    <input type="submit" value="Cotizar">
+                    
+                    <!--id: es para conectarse al for del label
+                    type: definir el tipo de entrada de info
+                    name: es el nombre de la variable que lleva la información
+                    placeholer: texto de ayuda -->
+                </form>
+                
+            </section>
+    </main>
+
+</body>
+</html>

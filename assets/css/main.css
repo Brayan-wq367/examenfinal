@@ -1,0 +1,298 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family:"Montserrat", sans-serif;
+    scroll-behavior: smooth;
+}
+.contenedor__maestro {
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+header.portada {
+    scroll-snap-align: start;
+    background-image: linear-gradient(rgba(255, 166, 0, 0.63), rgba(224, 11, 100, 0.719)), url(../../assets/img/1.jpg);
+    background-size: cover;
+    background-position: 0% 50%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+
+    animation: MoverFondo 20s ease-in-out infinite;
+    background-size: 120%;
+}
+
+@keyframes MoverFondo {
+    0% {
+        background-position: 10%;
+    }
+
+    50% {
+        background-position: 85%;
+    }
+
+    100% {
+        background-position: 10%;
+    }
+}
+
+section.contacto {
+    scroll-snap-align: start;
+}
+
+.portada {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    /*MODO ESCRITORIO APROX.12 COLUMNAS*/
+    position: relative;
+}
+
+
+.titulo {
+    font-size: 2rem;
+    grid-column: 1 / 4;
+    grid-row: 4/5;
+    padding: 0px 25px;
+
+    h1 {
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+}
+
+.btn-cotizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3/4;
+    grid-row: 6/7;
+
+    a {
+        color: white;
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+        padding: 1rem;
+        border-radius: .75rem;
+        
+        i {
+            animation: MovimientoDeFlecha 1.8s ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes MovimientoDeFlecha {
+    0% {transform: translateY(0px);}
+
+    50% {transform: translateY(15px);}
+
+    100% {transform: translateY(0x);}
+    
+}
+
+.rrss {
+    font-size: 1.3rem;
+    display: flex;
+    padding: 0px 0px 25px 0px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 20px;
+    right: 15px;
+    bottom: 63%;
+    transform-origin: center right;
+    transform: translateY(-50%) rotate(-90deg);
+    color: white;
+    
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        a {
+            padding: .35rem;
+
+    color: white;
+        }
+}
+
+section.contacto {
+    scroll-snap-align: start;
+    background-image: linear-gradient(rgba(255, 166, 0, 0.63), rgba(224, 11, 100, 0.719)), url(../../assets/img/2.jpg);
+    background-size: cover;
+    background-position: 0% 50%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: MoverFondo 20s ease-in-out infinite;
+    background-size: 120%;
+}
+
+.contenido-contacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    max-width: 550px;
+    width: 100%;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.60);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.formulario div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-bottom: 1rem;
+}
+
+.formulario input[type="text"],
+.formulario input[type="tel"],
+.formulario input[type="mail"],
+.formulario select {
+    padding: .5rem;
+    border-radius: 12px;
+    border: 1px;
+}
+
+.formulario textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: .5rem;
+    border-radius: 12px;
+}
+
+.formulario input:focus {
+    outline: 2px solid rgb(18, 136, 209);
+}
+
+.formulario input[type="submit"] {
+    padding: 0.7rem;
+    font-size: 1.3rem;
+    border-radius: 1rem;
+    border: 0px;
+    background-color: rgb(39, 39, 39);
+    color: ghostwhite;
+    font-weight: 800;
+    cursor: pointer;
+    position: absolute;
+    width: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -1.5rem;
+    transition: .3s ease-in-out;
+}
+
+.formulario input[type="submit"]:hover {
+    background-color: white;
+    color: black;
+}
+
+/*----------------MODO CELULAR----------------*/
+
+@media screen and (max-width: 1024px) {
+
+    .titulo {
+        h1 {
+            
+            font-size: 2rem;
+            color: white;
+        }
+    
+        p {
+            color: white;
+            font-size: 1.5rem;
+            padding: 1rem 0rem 0rem 0rem;
+        }
+    }
+    
+    .btn-cotizar {
+        a {
+            text-align: center;
+            color: white;
+            font-size: 1rem;
+        }
+    }
+    
+    .rrss {
+        font-size: 1rem;
+    }
+    
+
+.contenido-contacto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+.formulario {
+        margin: 3rem;
+    }
+    
+    
+.formulario div {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        margin-bottom: 1rem;
+    }
+    
+.formulario textarea {
+        width: 100%;
+        min-height: 150px;
+        padding: .5rem;
+        border-radius: 12px;
+    }
+    
+.formulario input:focus {
+        outline: 2px solid rgb(18, 136, 209);
+    }
+    
+.formulario input[type="submit"] {
+        font-size: 1rem;
+        border-radius: 1rem;
+        border: 0px;
+        background-color: rgb(39, 39, 39);
+        color: ghostwhite;
+        font-weight: 800;
+        cursor: pointer;
+        position: absolute;
+        width: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -1.5rem;
+        transition: .3s ease-in-out;
+    }
+    
+ .formulario input[type="submit"]:hover {
+        background-color: white;
+        color: black;
+    }
+    
+}
